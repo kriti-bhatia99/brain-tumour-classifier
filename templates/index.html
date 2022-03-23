@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Brain Tumour Detection</title>
+    </head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        body{
+            height: 100vh;
+            width: 100%;
+            background: url('https://singularityhub.com/wp-content/uploads/2018/03/neurons-brain-1-1068x601.jpg');
+            background-size: 100%;
+            overflow: hidden;
+        }
+        .btn-dark{
+            background: black;
+            color: white;
+        }
+
+    </style>
+    <body>
+        <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2" style="margin-top: 100px; background: linear-gradient(to bottom,transparent,rgb(125,125,125,.8) 90%); border-radius: 10px; padding: 15px;">
+            <h2 class="text-center" style="color: white;">Brain Tumour Classification System</h2>
+            <br>
+
+            <form action="/predict" method="POST" enctype="multipart/form-data">
+                <div class="form-group col-lg-12">
+                    <input type="file" class="form-control text-center form-control-file" name="img" accept="image/*" id="img" style="zoom:1.3" aria-describedby="fileHelpId">
+                    <br>
+                </div>
+                <div class="form-group text-center">
+                    <input type="submit" class="btn btn-dark btn-lg">
+                    {{error_message}}
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
